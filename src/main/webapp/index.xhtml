@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -7,13 +7,13 @@
     xmlns:p="http://primefaces.org/ui">
     
 <h:head>
-    <title>Argentum Web</title>
+    <title>Argentum Web 2.0</title>
 </h:head>
 
 <h:body>
 	
 	<h:form prependId="false">
-	<h:outputText value="Implementando funcionalidade filtro por valor..."></h:outputText>
+	<h:outputText value="Implementando funcionalidade filtro por valor R$..."></h:outputText>
 	<p:panel>
             <h:outputText value="Filtrar por período:"  style="margin-right:10px" />
             <p:inputMask id="filtroDataDe"  style="width:100px;" placeholder="De" mask="99/99/9999" value="#{argentumBean.filtroDataDe}">
@@ -30,14 +30,14 @@
 		
 		<p:panel>
 			<h:panelGrid>
-				<h:outputLabel value="Média Móvel" />
+				<h:outputLabel value="#Média Móvel" />
 				<p:selectOneButton value="#{argentumBean.nomeMedia}" >
 					<f:selectItem itemLabel="Simples" itemValue="MediaMovelSimples"/>
 					<f:selectItem itemLabel="Ponderada" itemValue="MediaMovelPonderada"/>
 					<p:ajax update=":grafico" listener = "#{argentumBean.geraGrafico}"  />
 				</p:selectOneButton>
 			
-				<h:outputLabel value="Indicador Base" />
+				<h:outputLabel value="#Indicador Base" />
 				<p:selectOneButton value="#{argentumBean.nomeIndicadorBase}">
 					<f:selectItem itemLabel="Abertura" itemValue="IndicadorAbertura" />
 					<f:selectItem itemLabel="Fechamento" itemValue="IndicadorFechamento" />
